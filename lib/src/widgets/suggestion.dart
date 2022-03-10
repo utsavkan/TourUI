@@ -8,7 +8,7 @@ class DestinationSuggestion extends StatelessWidget {
   final List<Suggestion> _suggestions = [
     Suggestion('Place Name 1', 'Description ', 'assets/images/nature.jpg'),
     Suggestion('Place Name 2', 'Description', 'assets/images/dest.jpg'),
-    Suggestion('Place Name 3', 'Description', 'assets/images/nature.jpg'),
+    Suggestion('Place Nasssme 3', 'Descriccsption', 'assets/images/nature.jpg'),
   ];
 
   @override
