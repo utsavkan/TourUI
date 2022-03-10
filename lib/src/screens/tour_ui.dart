@@ -17,6 +17,7 @@ class TourUI extends StatelessWidget {
         appBar: AppBar(title: Text('Destinations')),
         body: SingleChildScrollView(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               SearchBar(),
               ThemeList(),

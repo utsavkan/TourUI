@@ -1,8 +1,19 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import '../models/themes.dart';
 
 class ThemeList extends StatelessWidget {
+  final List<ThemeItem> _themes = [
+    ThemeItem('Advanture', 'assets/images'),
+    ThemeItem('Nature', 'assets/images/dest.jpg'),
+    ThemeItem('Family', 'assets/images/dest.jpg'),
+    ThemeItem('Lakes', 'assets/images/dest.jpg'),
+    ThemeItem('Treking', 'assets/images/dest.jpg'),
+    ThemeItem('Advanture', 'assets/images/dest.jpg'),
+    ThemeItem('Advanture', 'assets/images/dest.jpg'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +26,6 @@ class ThemeList extends StatelessWidget {
             child: Text('Theme'),
           ),
           Expanded(
-            //height: 130,
             child: ListView.custom(
                 scrollDirection: Axis.horizontal,
                 childrenDelegate: SliverChildBuilderDelegate(
@@ -27,15 +37,16 @@ class ThemeList extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             radius: 50,
-                            backgroundImage: AssetImage('assets/nature.jpg'),
+                            backgroundImage:
+                                AssetImage('assets/images/nature.jpg'),
                             backgroundColor: Colors.transparent,
                           ),
-                          Text('Theme1'),
+                          Text(_themes[index].theme),
                         ],
                       ),
                     );
                   },
-                  childCount: 10,
+                  childCount: _themes.length,
                 )),
           ),
         ]));
